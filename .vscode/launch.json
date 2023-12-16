@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Development server",
+      "command": "nvm use && ./node_modules/.bin/astro dev",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "name": "Build",
+      "command": "nvm use && ./node_modules/.bin/astro build",
+      "request": "launch",
+      "type": "node-terminal"
+    }
+  ]
+}
