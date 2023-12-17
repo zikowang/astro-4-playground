@@ -4,7 +4,7 @@ import type { PokemonListResponse } from "types/pokemon";
 
 const List = () => {
   const { data: pokemonList, loading } = useFetch<PokemonListResponse>(
-    `${import.meta.env.PUBLIC_POKEMON_API}?limit=10`,
+    `${import.meta.env.PUBLIC_POKEMON_API}?limit=20`,
   );
 
   if (loading) {
@@ -17,20 +17,20 @@ const List = () => {
 
   return (
     <div>
-      <ul>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
         {pokemonList.results.map(({ url }) => {
           const pokemonId = url.split("/").reverse()[1];
           return (
-            <li key={pokemonId}>
+            <div key={pokemonId} style={{ width: 200 }}>
               <div className="pokemon-list-element">
                 <a href={`pokemon/view?id=${pokemonId}`}>
                   <PokemonView id={pokemonId} />
                 </a>
               </div>
-            </li>
+            </div>
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 };
