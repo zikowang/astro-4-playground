@@ -14,8 +14,10 @@
       "layouts/*": ["src/layouts/*"],
       "pages/*": ["src/pages/*"],
       "services/*": ["src/services/*"],
+      "styles/*": ["src/styles/*"],
       "types/*": ["src/types/*"]
     }
   },
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }

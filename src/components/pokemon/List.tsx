@@ -19,14 +19,12 @@ const List = () => {
     <div>
       <ul>
         {pokemonList.results.map(({ url }) => {
-          const pokeomId = url.split("/").reverse()[1];
+          const pokemonId = url.split("/").reverse()[1];
           return (
-            <li>
-              <div
-                style={{ display: "flex", gap: "10px", alignItems: "center" }}
-              >
-                <a href={`pokemon/view?id=${pokeomId}`}>
-                  <PokemonView id={pokeomId} />
+            <li key={pokemonId}>
+              <div className="pokemon-list-element">
+                <a href={`pokemon/view?id=${pokemonId}`}>
+                  <PokemonView id={pokemonId} />
                 </a>
               </div>
             </li>
