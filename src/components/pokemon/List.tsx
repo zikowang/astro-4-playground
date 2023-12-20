@@ -1,10 +1,11 @@
 import PokemonView from "components/pokemon/View";
 import useFetch from "hooks/useFetch";
+import { PUBLIC_POKEMON_API } from "src/config/env";
 import type { PokemonListResponse } from "types/pokemon";
 
 const List = () => {
   const { data: pokemonList, loading } = useFetch<PokemonListResponse>(
-    `${import.meta.env.PUBLIC_POKEMON_API}?limit=20`,
+    `${PUBLIC_POKEMON_API}?limit=20`,
   );
 
   if (loading) {

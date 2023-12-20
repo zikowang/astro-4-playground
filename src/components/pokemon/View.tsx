@@ -1,11 +1,12 @@
 import useFetch from "hooks/useFetch";
+import { PUBLIC_POKEMON_API } from "src/config/env";
 import type { Pokemon } from "types/pokemon";
 
 const PokemonView = ({ id = null }: { id?: string | null }) => {
   const paramId = id || new URLSearchParams(window.location.search).get("id");
 
   const { data: pokemon, loading } = useFetch<Pokemon>(
-    `${import.meta.env.PUBLIC_POKEMON_API}/${paramId}`,
+    `${PUBLIC_POKEMON_API}/${paramId}`,
   );
 
   if (loading) {
