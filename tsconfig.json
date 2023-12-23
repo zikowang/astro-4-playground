@@ -18,6 +18,6 @@
       "types/*": ["src/types/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "tests/test-config.ts"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,14 +1,16 @@
 import { test, expect } from "@playwright/test";
 
+import { BASE_URL } from "./test-config";
+
 test("has title", async ({ page }) => {
-  await page.goto("http://localhost:4321/");
+  await page.goto(BASE_URL);
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Astro/);
 });
 
 test("Pokemon list link", async ({ page }) => {
-  await page.goto("http://localhost:4321/");
+  await page.goto(BASE_URL);
 
   // Click the Pokemon link.
   await page.getByRole("link", { name: "Pokemon" }).click();
@@ -18,7 +20,7 @@ test("Pokemon list link", async ({ page }) => {
 });
 
 test("Pokemon link", async ({ page }) => {
-  await page.goto("http://localhost:4321/");
+  await page.goto(BASE_URL);
 
   // Click the Pokemon List link.
   await page.getByRole("link", { name: "Pokemon" }).click();
