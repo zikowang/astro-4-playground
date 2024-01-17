@@ -1,0 +1,17 @@
+---
+import Layout from "layouts/Layout.astro";
+import Bars from "components/election/Bars";
+import Bootstrap from "components/Bootstrap";
+---
+
+<Bootstrap client:load>
+    <Layout title="votingAreas Widget">
+        <h1>Election</h1>
+
+        <Bars client:only="react" />
+
+        <Bars client:only="react" />
+
+        <Bars client:only="react" />
+    </Layout>
+</Bootstrap>

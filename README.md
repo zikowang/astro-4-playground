@@ -7,3 +7,4 @@ This is a playground for Astro >= 4
 - AstroJs
 - React
 - Typescript
+- Playwright

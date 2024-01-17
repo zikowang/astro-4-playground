@@ -1,0 +1,13 @@
+---
+import Layout from "layouts/Layout.astro";
+import BarsComponent from "components/election/Bars";
+import Bootstrap from "components/Bootstrap";
+---
+
+<Bootstrap client:load>
+    <Layout title="Bars Widget">
+        <h1>Election</h1>
+
+        <BarsComponent client:only="react" />
+    </Layout>
+</Bootstrap>

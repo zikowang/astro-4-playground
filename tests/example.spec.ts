@@ -32,5 +32,5 @@ test("Pokemon link", async ({ page }) => {
   await page.getByRole("link", { name: "Bulbasaur" }).click();
 
   // Expects page to have a heading with the name of Bulbasaur
-  await expect(page.getByRole("heading", { name: "Bulbasaur" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Bulbasaur2" })).toBeVisible();
 });
