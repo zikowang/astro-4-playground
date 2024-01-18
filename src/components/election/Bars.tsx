@@ -1,16 +1,11 @@
-import useFetch from "hooks/useFetch";
-import useBuildFetchUrl from "hooks/useBuildFetchUrl";
-import useParams from "hooks/useParams";
 import { useStore } from "@nanostores/react";
-import { globalStore } from "store/globalStore";
+import { $globalStore } from "store/globalStore";
 
 const Bars = () => {
-    const { configuration, labels } = useStore(globalStore);
-    const { competition, valueType } = useParams();
+    const { config, labels, params, data, dataLoading } =
+        useStore($globalStore);
 
-    const { data, loading } = useFetch(useBuildFetchUrl());
-
-    if (loading) {
+    if (dataLoading) {
         return <h1>Loading...</h1>;
     }
 
@@ -20,18 +15,22 @@ const Bars = () => {
 
     return (
         <div>
-            <h1>Bars {competition}</h1>
-            {valueType === "seats" ? <div>Seats</div> : <div>Percent</div>}
+            <h3>Bars Widget {params.competition}</h3>
+            {params.valueType === "seats" ? (
+                <div>Seats</div>
+            ) : (
+                <div>Percent</div>
+            )}
             <pre>
-                <h2>Data</h2>
+                <h4>Data</h4>
                 {JSON.stringify(data, null, 2)}
             </pre>
             <pre>
-                <h2>Config</h2>
-                {JSON.stringify(configuration, null, 2)}
+                <h4>Config</h4>
+                {JSON.stringify(config, null, 2)}
             </pre>
             <pre>
-                <h2>Labels</h2>
+                <h4>Labels</h4>
                 {labels}
             </pre>
         </div>

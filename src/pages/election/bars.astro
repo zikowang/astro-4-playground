@@ -4,9 +4,9 @@ import BarsComponent from "components/election/Bars";
 import Bootstrap from "components/Bootstrap";
 ---
 
-<Bootstrap client:load>
+<Bootstrap widget="bars" client:only="react">
     <Layout title="Bars Widget">
-        <h1>Election</h1>
+        <h2>Bars</h2>
 
         <BarsComponent client:only="react" />
     </Layout>
