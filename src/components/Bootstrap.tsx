@@ -44,6 +44,7 @@ async function getLabels(params: QueryParams) {
     const apiResponse = await fetch(
         `${PUBLIC_ELECTIONS_LIVE_S3}/${params.competition}/assets/feed/${params.language}/labels.${params.competition}.xml`,
     );
+
     const result = await apiResponse.text();
 
     return result;
