@@ -16,7 +16,8 @@
             "pages/*": ["src/pages/*"],
             "services/*": ["src/services/*"],
             "styles/*": ["src/styles/*"],
-            "types/*": ["src/types/*"]
+            "types/*": ["src/types/*"],
+            "widgets/*": ["src/widgets/*"]
         }
     },
     "include": ["src/**/*", "tests/test-config.ts"],

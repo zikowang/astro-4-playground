@@ -8,7 +8,7 @@ function getParams() {
     const params: QueryParams = {
         // eventId: should not be empty
         eventId: undefined,
-        // language: default to "en"
+        // language: default to "de"
         language: undefined,
         competition: undefined,
         folder: undefined,

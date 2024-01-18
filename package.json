@@ -7,7 +7,7 @@
         "dev": "astro dev",
         "start": "astro dev",
         "build": "tsc && astro build",
-        "preview": "astro preview",
+        "preview": "tsc && astro build && astro preview",
         "astro": "astro",
         "test": "npx playwright test",
         "test:ui": "npx playwright test --ui",

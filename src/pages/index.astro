@@ -51,6 +51,7 @@ const elections = [
             >
         </h1>
 
+        <h2>Bars Widget</h2>
         <ul role="list" class="link-card-grid">
             {
                 elections.map((entry) => {
@@ -64,6 +65,28 @@ const elections = [
                     return (
                         <Card
                             href={`election/bars?${search}`}
+                            title={entry.competition}
+                            body="Go to elections live collection ❤️"
+                        />
+                    );
+                })
+            }
+        </ul>
+
+        <h2>Voting Areas Widget</h2>
+        <ul role="list" class="link-card-grid">
+            {
+                elections.map((entry) => {
+                    const search = Object.keys(entry)
+                        .map(
+                            (key) =>
+                                `${key}=${entry[key as keyof typeof entry]}`,
+                        )
+                        .join("&");
+
+                    return (
+                        <Card
+                            href={`election/votingAreas?${search}`}
                             title={entry.competition}
                             body="Go to elections live collection ❤️"
                         />
