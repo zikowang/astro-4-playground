@@ -4,6 +4,8 @@ import Bootstrap from "components/Bootstrap";
 const VotingAreasWidget = () => {
     return (
         <Bootstrap widget="votingAreas">
+            <h2>Voting Areas</h2>
+
             <Bars />
 
             <Bars />

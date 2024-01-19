@@ -1,5 +1,11 @@
 export type QueryParams = {
+    /**
+     * should not be empty
+     */
     eventId?: string;
+    /**
+     * default to "de"
+     */
     language?: string;
     competition?: string;
     folder?: string;
@@ -10,6 +16,13 @@ export type QueryParams = {
     valueType?: string;
     hideHeader?: string;
     hideFooter?: string;
-    customerConfig?: string;
-    cusomerStyle?: string;
+    customer?: string;
+    /**
+     * Full URL to custom config file
+     */
+    customConfigUrl?: string;
+    /**
+     * Full URL to custom stylesheet file
+     */
+    customStyleUrl?: string;
 };

@@ -1,5 +1,6 @@
 ---
 import Card from "components/Card.astro";
+import { PUBLIC_ELECTIONS_LIVE_S3 } from "constants/env";
 import Layout from "layouts/Layout.astro";
 
 const elections = [
@@ -13,6 +14,7 @@ const elections = [
         type: "survey",
         feedName: "results_ranking_par_us_1.json",
         valueType: "seats",
+        customStyleUrl: `${PUBLIC_ELECTIONS_LIVE_S3}/customers/landtagswahl-hessen2023/aws/sz/feed/style.css`,
     },
     {
         label: "US President Preelection Republicans 2024",
