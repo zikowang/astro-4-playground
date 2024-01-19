@@ -73,8 +73,18 @@ module.exports = {
         // Configuration for Astro
         {
             files: ["**/*.astro"],
-            plugins: ["@typescript-eslint", "react", "unused-imports", "tailwindcss", "simple-import-sort"],
-            extends: ["plugin:tailwindcss/recommended", "airbnb-typescript", "plugin:prettier/recommended"],
+            plugins: [
+                "@typescript-eslint",
+                "react",
+                "unused-imports",
+                "tailwindcss",
+                "simple-import-sort",
+            ],
+            extends: [
+                "plugin:tailwindcss/recommended",
+                "airbnb-typescript",
+                "plugin:prettier/recommended",
+            ],
             parser: "astro-eslint-parser",
             parserOptions: {
                 parser: "@typescript-eslint/parser",
@@ -117,7 +127,10 @@ module.exports = {
                 "simple-import-sort/exports": "error", // Export configuration for `eslint-plugin-simple-import-sort`
                 "@typescript-eslint/no-unused-vars": "off",
                 "unused-imports/no-unused-imports": "error",
-                "unused-imports/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+                "unused-imports/no-unused-vars": [
+                    "error",
+                    { argsIgnorePattern: "^_" },
+                ],
             },
             globals: {
                 Astro: "readonly",
