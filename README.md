@@ -16,7 +16,7 @@ We are using [Nodejs](https://nodejs.org/en) >= 18 and npm for this project. To 
 npm ci && npm run prepare
 ```
 
-> Be sure to use the latest version of [npm](https://www.npmjs.com/) and [Nodejs](https://nodejs.org/en) >= 18!\*\*
+> **Be sure to use the latest version of [npm](https://www.npmjs.com/) and [Nodejs](https://nodejs.org/en) >= 18!**
 
 For Mac you can use [NVM](https://nodejs.org/en/download/package-manager#nvm) to install nodejs >= 18 and switch between versions.
 
