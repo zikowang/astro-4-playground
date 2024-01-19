@@ -11,14 +11,14 @@ This project is a prototype for the ElectionsLive project. It is built using Ast
 -   [Developing](#developing)
 -   [Testing](#testing)
 -   [Structure](#structure)
-    -   [Widgets](#widgets)
-    -   [Components](#components)
     -   [Bootstrap](#bootstrap)
         -   [`paramService.ts`](#paramservicets)
         -   [`configService.ts`](#configservicets)
         -   [`styleService.ts`](#styleservicets)
         -   [`labelsService.ts`](#labelsservicets)
         -   [`dataService.ts`](#dataservicets)
+    -   [Widgets](#widgets)
+    -   [Components](#components)
 
 # Tech Stack
 
@@ -87,21 +87,19 @@ npx playwright install --with-deps msedge
 
 # Structure
 
-## Widgets
-
-Every widget has its own `.astro` page-file that is build into its own `.html` file. The page-files are located in the `src/pages` folder.
-
-Each widget page-file calls a widget-component that renders the widget and composits the low level components (e.g. bars, pies, maps etc.) used in it. The widget-components are located in the `src/widgets` folder.
-
-## Components
-
-The low level components are located in the `src/components` folder. They are used by the widget-components to render the widgets.
-
 ## Bootstrap
 
-Every widget and component is relying on the `<Bootstrap />` component. Every widget-component should wrap its loe level components inside the `<Bootstrap />` component. The bootstrap component is located in the `src/components` folder.
+Every widget and component is relying on the `<Bootstrap />` component. Every widget-component should wrap its low level components inside the `<Bootstrap />` component. The bootstrap component is located in the `src/components` folder.
 
-The `<Bootstrap />` component is responsible for the following:
+```tsx
+const ExampleWidget = () => {
+    <Bootstrap widget="widget-name">
+        <AnyComponent />
+    </Bootstrap>;
+};
+```
+
+The `<Bootstrap />` component is calling `services`, located in `src/services`, that are responsible for the following:
 
 ### `paramService.ts`
 
@@ -125,4 +123,16 @@ The `<Bootstrap />` component is responsible for the following:
 
 -   fetching the data for the widget
 
-Fetched data, configs, labels, params are synchronized with the `nanostores` state management. Every widget and component can subscribe to the `nanostores` to get the latest data, configs, labels, params.
+Fetched data, configs, labels, params are synchronized with the `nanostores` state management. Every widget and component can subscribe to the `nanostores` to get the latest data, configs, labels, params. The state management is done in the `src/stores` folder.
+
+## Widgets
+
+Every widget has its own `.astro` page-file that is build into its own `.html` file. The page-files are located in the `src/pages` folder.
+
+Each widget page-file calls a widget-component that renders the widget and composits the low level components (e.g. bars, pies, maps etc.) used in it. The widget-components are located in the `src/widgets` folder.
+
+## Components
+
+The low level components are located in the `src/components` folder. They are used by the widget-components to render the widgets.
+
+Each low-level component is responsible for its own state and data management. This should be done within a custom hook, so the logic can be [tested](#testing) easily.
