@@ -4,6 +4,18 @@ import Card from "components/Card.astro";
 
 const elections = [
     {
+        label: "US President Preelection Democrats 2024",
+        language: "de",
+        competition: "pw_us_pres",
+        folder: "feed",
+        season: "s2024",
+        round: "round1",
+        type: "survey",
+        feedName: "results_ranking_par_us_1.json",
+        valueType: "seats",
+    },
+    {
+        label: "US President Preelection Republicans 2024",
         language: "de",
         competition: "pw_us_pres",
         folder: "feed",
@@ -14,6 +26,18 @@ const elections = [
         valueType: "seats",
     },
     {
+        label: "DE Bundetagswahl 2021",
+        language: "de",
+        competition: "bw_de",
+        folder: "feed",
+        season: "s2021",
+        round: "round1",
+        type: "live",
+        feedName: "results_live.json",
+        valueType: "seats",
+    },
+    {
+        label: "DE Landtagswahl Bayern 2023",
         language: "de",
         competition: "lw_by",
         folder: "feed",
@@ -23,6 +47,7 @@ const elections = [
         feedName: "results_live.json",
     },
     {
+        label: "DE Landtagswahl Hessen 2023",
         language: "de",
         competition: "lw_he",
         folder: "feed",
@@ -32,6 +57,7 @@ const elections = [
         feedName: "results_live.json",
     },
     {
+        label: "Brasilien Presidentschaftswahlen 2022",
         language: "de",
         competition: "pw_br_pres",
         folder: "feed",
@@ -65,8 +91,8 @@ const elections = [
                     return (
                         <Card
                             href={`election/bars?${search}`}
-                            title={entry.competition}
-                            body="Go to elections live collection ❤️"
+                            title={entry.label}
+                            body=""
                         />
                     );
                 })

@@ -11,4 +11,5 @@ export type QueryParams = {
     hideHeader?: string;
     hideFooter?: string;
     customerConfig?: string;
+    cusomerStyle?: string;
 };
