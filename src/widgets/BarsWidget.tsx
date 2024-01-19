@@ -1,5 +1,5 @@
-import Bootstrap from "components/Bootstrap";
 import Bars from "components/Bars/Bars";
+import Bootstrap from "components/Bootstrap";
 
 const BarsWidget = () => {
     return (

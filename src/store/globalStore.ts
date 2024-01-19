@@ -1,13 +1,17 @@
 import { map } from "nanostores";
+
+import type { Config } from "types/config";
+import type { Data } from "types/data";
+import type { Label } from "types/labels";
 import type { QueryParams } from "types/query";
 
 type GlobalStore = {
     params: QueryParams;
-    data?: any;
+    data?: Data;
     dataLoading: boolean;
-    labels?: any;
+    labels?: Label;
     labelsLoading: boolean;
-    config?: any;
+    config?: Config;
     configLoading: boolean;
 };
 

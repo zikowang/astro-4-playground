@@ -1,5 +1,6 @@
 import { useStore } from "@nanostores/react";
-import { PUBLIC_ELECTIONS_LIVE_S3 } from "src/config/env";
+
+import { PUBLIC_ELECTIONS_LIVE_S3 } from "constants/env";
 import { $globalStore } from "store/globalStore";
 
 type ResultEntry = {
@@ -11,23 +12,23 @@ type ResultEntry = {
     date_out: string;
 };
 
-type ResultData = {
-    type: number;
-    statusDate: string;
-    sourceResults: string;
-    sourceName: string;
-    sourceFinalName?: string;
-    seats?: number;
-    totalSeats?: number;
-    totalAbsolute?: number;
-    percentCounted?: string;
-    percentTurnout?: string;
-    results: ResultEntry[];
-};
+// type ResultData = {
+//     type: number;
+//     statusDate: string;
+//     sourceResults: string;
+//     sourceName: string;
+//     sourceFinalName?: string;
+//     seats?: number;
+//     totalSeats?: number;
+//     totalAbsolute?: number;
+//     percentCounted?: string;
+//     percentTurnout?: string;
+//     results: ResultEntry[];
+// };
 
-type ResultResponse = {
-    results: ResultData[];
-};
+// type ResultResponse = {
+//     results: ResultData[];
+// };
 
 const Bars = () => {
     const { config, labels, params, data, dataLoading } =
@@ -59,10 +60,12 @@ const Bars = () => {
                                     {result.party ? (
                                         <img
                                             src={`${PUBLIC_ELECTIONS_LIVE_S3}/${params.competition}/img/${params.season}/${result.party}/${result.id}.png`}
+                                            alt={`${result.id}`}
                                         />
                                     ) : (
                                         <img
                                             src={`${PUBLIC_ELECTIONS_LIVE_S3}/${params.competition}/img/${params.season}/${result.id}/${result.id}.png`}
+                                            alt={`${result.id}`}
                                         />
                                     )}
                                 </td>
@@ -100,7 +103,9 @@ const Bars = () => {
             </pre>
             <pre>
                 <h4>Labels</h4>
-                {labels}
+                {typeof labels === "string"
+                    ? labels
+                    : JSON.stringify(labels, null, 2)}
             </pre>
         </div>
     );

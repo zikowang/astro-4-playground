@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 import { getConfig } from "services/configService";
 import { getData } from "services/dataService";
 import { getLabels } from "services/lablesService";
@@ -20,11 +22,11 @@ const Bootstrap = ({
     children,
 }: {
     widget: string;
-    children?: React.ReactNode;
+    children?: ReactNode;
 }) => {
     bootstrap(widget);
 
-    return <>{children}</>;
+    return children;
 };
 
 export default Bootstrap;
