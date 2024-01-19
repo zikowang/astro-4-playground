@@ -4,10 +4,10 @@
     "version": "0.0.1",
     "license": "UNLICENSED",
     "scripts": {
-        "dev": "astro dev",
-        "start": "astro dev",
+        "dev": "astro dev --open",
+        "start": "astro dev --open",
         "build": "tsc && astro build",
-        "preview": "tsc && astro build && astro preview",
+        "preview": "tsc && astro build && astro preview --open",
         "astro": "astro",
         "test": "npx playwright test",
         "test:ui": "npx playwright test --ui",
