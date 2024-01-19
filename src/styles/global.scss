@@ -54,3 +54,24 @@ h1 {
     gap: 2rem;
     padding: 0;
 }
+
+.dpa_ranking {
+    position: relative;
+    max-width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ddd;
+    overflow: hidden;
+
+    .dpa_image {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        background: #fff;
+    }
+}

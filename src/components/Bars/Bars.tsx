@@ -12,43 +12,72 @@ type ResultEntry = {
     date_out: string;
 };
 
-// type ResultData = {
-//     type: number;
-//     statusDate: string;
-//     sourceResults: string;
-//     sourceName: string;
-//     sourceFinalName?: string;
-//     seats?: number;
-//     totalSeats?: number;
-//     totalAbsolute?: number;
-//     percentCounted?: string;
-//     percentTurnout?: string;
-//     results: ResultEntry[];
-// };
+type ResultData = {
+    type: number;
+    statusDate: string;
+    sourceResults: string;
+    sourceName: string;
+    sourceFinalName?: string;
+    seats?: number;
+    totalSeats?: number;
+    totalAbsolute?: number;
+    percentCounted?: string;
+    percentTurnout?: string;
+    results: ResultEntry[];
+};
 
-// type ResultResponse = {
-//     results: ResultData[];
-// };
+type ResultResponse = {
+    results: ResultData[];
+};
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const useBars = (data: ResultResponse) => {
+    if (!data) {
+        return null;
+    }
+
+    const barsData = { ...data };
+
+    barsData.results[0].results.sort((a: ResultEntry, b: ResultEntry) => {
+        if (a.percent !== undefined && b.percent !== undefined) {
+            return b.percent - a.percent;
+        }
+
+        if (a.seats !== undefined && b.seats !== undefined) {
+            return b.seats - a.seats;
+        }
+
+        if (a.absolute !== undefined && b.absolute !== undefined) {
+            return Number(b.absolute) - Number(a.absolute);
+        }
+
+        return 0;
+    });
+
+    return barsData;
+};
 
 const Bars = () => {
     const { config, labels, params, data, dataLoading } =
         useStore($globalStore);
 
+    const barsData = useBars(data);
+
     if (dataLoading) {
         return <h1>Loading...</h1>;
     }
 
-    if (!data) {
+    if (!barsData) {
         return null;
     }
 
-    const hasSeats = data.results[0].results.some(
+    const hasSeats = barsData.results[0].results.some(
         (result: ResultEntry) => !!result.seats,
     );
-    const hasPercent = data.results[0].results.some(
+    const hasPercent = barsData.results[0].results.some(
         (result: ResultEntry) => !!result.percent,
     );
-    const hasAbsolute = data.results[0].results.some(
+    const hasAbsolute = barsData.results[0].results.some(
         (result: ResultEntry) => !!result.absolute,
     );
 
@@ -59,8 +88,8 @@ const Bars = () => {
 
             <table>
                 <tbody>
-                    {data.results[0].results.map((result: ResultEntry) => {
-                        const oldResult = data.results[1]?.results?.find(
+                    {barsData.results[0].results.map((result: ResultEntry) => {
+                        const oldResult = barsData.results[1]?.results?.find(
                             (elem: ResultEntry) => elem.id === result.id,
                         );
 
@@ -68,15 +97,21 @@ const Bars = () => {
                             <tr key={result.id}>
                                 <td>
                                     {result.party ? (
-                                        <img
-                                            src={`${PUBLIC_ELECTIONS_LIVE_S3}/${params.competition}/img/${params.season}/${result.party}/${result.id}.png`}
-                                            alt={`${result.id}`}
-                                        />
+                                        <div className="dpa_ranking">
+                                            <img
+                                                className="dpa_image"
+                                                src={`${PUBLIC_ELECTIONS_LIVE_S3}/${params.competition}/img/${params.season}/${result.party}/${result.id}.png`}
+                                                alt={`${result.id}`}
+                                            />
+                                        </div>
                                     ) : (
-                                        <img
-                                            src={`${PUBLIC_ELECTIONS_LIVE_S3}/${params.competition}/img/${params.season}/${result.id}/${result.id}.png`}
-                                            alt={`${result.id}`}
-                                        />
+                                        <div className="dpa_ranking">
+                                            <img
+                                                className="dpa_image"
+                                                src={`${PUBLIC_ELECTIONS_LIVE_S3}/${params.competition}/img/${params.season}/${result.id}/${result.id}.png`}
+                                                alt={`${result.id}`}
+                                            />
+                                        </div>
                                     )}
                                 </td>
                                 {hasSeats && (
@@ -90,7 +125,7 @@ const Bars = () => {
                                 {hasPercent && (
                                     <td>
                                         Percent: {result.percent}{" "}
-                                        {oldResult?.perccent
+                                        {oldResult?.percent
                                             ? `(${oldResult.percent})`
                                             : ""}
                                     </td>
