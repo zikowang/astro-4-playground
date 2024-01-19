@@ -4,7 +4,10 @@ import * as dpaPrettierConfig from "eslint-config-dpa-infocom/prettier-config.js
 export default {
     ...dpaPrettierConfig,
     plugins: ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-astro"],
-    importOrder: ["^[.*/]", "^(components|constants|hooks|store|layouts|pages|services|styles|types|widgets)/?(.*)$"],
+    importOrder: [
+        "^[.*/]",
+        "^(components|constants|hooks|store|layouts|pages|services|styles|types|widgets)/?(.*)$",
+    ],
     importOrderSeparation: true,
     importOrderSortSpecifiers: true,
     overrides: [

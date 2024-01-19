@@ -1,10 +1,19 @@
-# Astro 4 playground
+# ElectionsLive Astro Project
 
-This is a playground for Astro >= 4
+This project is a prototype for the ElectionsLive project. It is built using AstroJs and React.
 
-# Using
+# Pre-requisites
 
-- AstroJs
-- React
-- Typescript
-- Playwright
+-   nodeJs >= 18
+-   npm ci
+-   npm run prepare
+
+# Tech Stack
+
+-   Astrojs >= 4
+-   React >= 18
+-   Typescript >= 5
+
+# Testing
+
+-   Playwright
