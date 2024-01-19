@@ -42,6 +42,16 @@ const Bars = () => {
         return null;
     }
 
+    const hasSeats = data.results[0].results.some(
+        (result: ResultEntry) => !!result.seats,
+    );
+    const hasPercent = data.results[0].results.some(
+        (result: ResultEntry) => !!result.percent,
+    );
+    const hasAbsolute = data.results[0].results.some(
+        (result: ResultEntry) => !!result.absolute,
+    );
+
     return (
         <div>
             <h3>Bars Widget {params.competition}</h3>
@@ -69,24 +79,30 @@ const Bars = () => {
                                         />
                                     )}
                                 </td>
-                                <td>
-                                    Seats: {result.seats}{" "}
-                                    {oldResult?.seats
-                                        ? `(${oldResult.seats})`
-                                        : ""}
-                                </td>
-                                <td>
-                                    Percent: {result.percent}{" "}
-                                    {oldResult?.perccent
-                                        ? `(${oldResult.percent})`
-                                        : ""}
-                                </td>
-                                <td>
-                                    Absolute: {result.absolute}{" "}
-                                    {oldResult?.absolute
-                                        ? `(${oldResult.absolute})`
-                                        : ""}
-                                </td>
+                                {hasSeats && (
+                                    <td>
+                                        Seats: {result.seats}{" "}
+                                        {oldResult?.seats
+                                            ? `(${oldResult.seats})`
+                                            : ""}
+                                    </td>
+                                )}
+                                {hasPercent && (
+                                    <td>
+                                        Percent: {result.percent}{" "}
+                                        {oldResult?.perccent
+                                            ? `(${oldResult.percent})`
+                                            : ""}
+                                    </td>
+                                )}
+                                {hasAbsolute && (
+                                    <td>
+                                        Absolute: {result.absolute}{" "}
+                                        {oldResult?.absolute
+                                            ? `(${oldResult.absolute})`
+                                            : ""}
+                                    </td>
+                                )}
                             </tr>
                         );
                     })}
