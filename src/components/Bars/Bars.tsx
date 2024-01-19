@@ -30,7 +30,6 @@ type ResultResponse = {
     results: ResultData[];
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const useBars = (data: ResultResponse) => {
     if (!data) {
         return null;
