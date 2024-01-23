@@ -1,0 +1,1040 @@
+html,
+body {
+    margin: 25px;
+    padding: 0;
+    background-color: rgb(63, 56, 56);
+}
+
+.dpa_app {
+    font-family: "SZSansDigital", "Arial", "sans-serif";
+    color: #29293a;
+    fill: #29293a;
+}
+
+.dpa_tooltip {
+    font-family: "SZSansDigital", "Arial", "sans-serif";
+    color: #29293a;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #ffffff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 0.5px solid #e0e0e3;
+    box-shadow: 10px 10px 30px 0 #0000001a;
+}
+
+.dpa_tooltip .dpa_tooltip-arrow::before {
+    border-color: #e0e0e3 transparent transparent transparent;
+}
+
+.dpa_tooltip .dpa_tooltip-arrow::after {
+    border-color: #ffffff transparent transparent transparent;
+}
+
+/*FontSize11 wird zu 12px*/
+.dpa_fontSize11 {
+    font-size: 12px;
+}
+
+/*FontSize12 wird zu 14px*/
+.dpa_fontSize12 {
+    font-size: 14px;
+}
+
+/*Absoftung der Overlays*/
+.dpa_bodyOver-background {
+    background-color: white;
+    opacity: 80%;
+}
+.dpa_bodyOver-background-flyout {
+    background-color: white;
+    opacity: 80%;
+}
+
+/*Info Popup/ Informations-Overlay*/
+.dpa_app .dpa_surveyInfo,
+.dpa_app .dpa_imageSources {
+    min-width: 300px;
+    max-width: 500px;
+    line-height: 21px;
+    font-size: 14px;
+    box-shadow: 10px 10px 30px 0 #0000001a !important;
+}
+
+.dpa_app .dpa_surveyInfo .dpa_surveyInfo-title {
+    border-bottom: none;
+}
+
+/*Headline Kein Uppercase und linksbündig*/
+.dpa_app .dpa_widget-title .dpa_pageTitle1 {
+    text-transform: none;
+    font-size: 24px;
+    letter-spacing: 0.24px;
+    font-weight: 800;
+}
+
+.dpa_app.dpa_app-360 .dpa_widget-title .dpa_pageTitle1 {
+    font-size: 21px;
+    letter-spacing: 0.13px;
+}
+
+.dpa_app .alignCenter {
+    text-align: unset;
+}
+.dpa_app .dpa_widget-title .dpa_pageTitleWrap {
+    padding: 0 15px 0 0;
+}
+
+.dpa_app .dpa_content-title {
+    text-align: left;
+}
+
+/*Strich unter Headline entfernen*/
+.dpa_app .dpa_widget-title {
+    border-bottom: none;
+}
+
+.dpa_content-menu-btn .dpa_content-menu-btn-label-sub {
+    color: #29293a;
+    font-size: 14px;
+}
+
+/*Auswahlbutton linksbündig*/
+.dpa_content-menu-btn {
+    justify-content: left;
+    padding-left: 0;
+    border-bottom: 0 solid #dbdbdb;
+    text-align: left;
+    line-height: 20px;
+}
+
+.dpa_partyInfo .dpa_partyInfo-values {
+    padding: 3px 0 6px;
+}
+
+/*Dropdownmenü*/
+.dpa_content-menu-flyout {
+    padding: 10px 0;
+}
+
+.dpa_content-menu-flyout .dpa_content-menu-flyout-content {
+    padding: 0;
+    border: 2px solid #e0e0e3;
+    margin: 10px 0;
+}
+
+.dpa_votingAreas .dpa_content-menu-flyout-content .dpa_scroll-content {
+    padding-left: 0;
+}
+.dpa_votingAreas .dpa_content-menu-flyout-search {
+    padding: 0;
+}
+
+.dpa_votingAreas .dpa_content-menu-flyout-search {
+    background: url(../img/magnifier.svg) no-repeat 20px center !important;
+    background-size: 16px auto !important;
+}
+.dpa_votingAreas
+    .dpa_content-menu-flyout-search
+    .dpa_content-menu-flyout-search-input {
+    padding: 14px 10px 14px 50px;
+    border-bottom: 1px solid #e0e0e3;
+}
+
+.dpa_votingAreas
+    .dpa_content-menu-flyout-search
+    .dpa_content-menu-flyout-search-input::placeholder {
+    color: #71737f;
+    font-family: "SZSansDigital", "Arial", "sans-serif";
+    font-size: 14px;
+}
+
+.dpa_votingAreas .dpa_scroll-btn {
+    right: 10px;
+}
+
+.dpa_votingAreas .dpa_scroll-btn.dpa_scrollUp-btn {
+    top: 70px;
+}
+
+.dpa_votingAreas .dpa_scrollDown-btn {
+    margin-top: -47px;
+}
+
+.dpa_content-menu-flyout .dpa_content-menu-flyout-btn {
+    border-bottom: 1px solid #f2f2f3;
+    text-align: left;
+    margin: 0;
+    padding: 1rem 4vw;
+}
+.dpa_content-menu-flyout .dpa_content-menu-flyout-btn.active {
+    background-color: #f2f2f3;
+}
+
+/***BARS***/
+/* Parteiname und -werte*/
+.dpa_app:not(.dpa_appSACoalition) .dpa_partyInfo {
+    background-color: transparent;
+    margin-top: 11px;
+}
+.dpa_app .dpa_partyInfo .dpa_partyInfo-party-color {
+    display: block;
+    height: 5px;
+    width: 100%;
+}
+
+.dpa_app .dpa_partyInfo .dpa_partyInfo-party {
+    background-color: transparent;
+    color: #29293a;
+    padding: 7px 5px 3px;
+}
+
+.dpa_app .dpa_partyInfo .dpa_partyInfo-diffText,
+.dpa_app .dpa_partyInfo-diff .dpa_partyInfo-diffText {
+    color: #29293a;
+    font-size: 14px;
+}
+/***BARSLIST***/
+/* ListBar kürzen*/
+.dpa_bars .dpa_barsList-content .dpa_barsContainer {
+    width: calc(100% - 162px);
+}
+/* Abstände gleichmäßig*/
+.dpa_bars .dpa_bars-scroll-container {
+    padding: 10px 15px;
+}
+
+.dpa_bars .dpa_bars-scroll-container,
+.dpa_app.dpa_app-320 .dpa_bars .dpa_bars-scroll-container {
+    padding: 10px 0;
+}
+
+/*Unterer Prozentangabe Schriftfarbe dunkel */
+.dpa_bars
+    .dpa_barsList-content
+    .dpa_barContainer.dpa_barContainerCompare
+    .dpa_partyInfo-value {
+    color: #29293a;
+    font-weight: normal;
+}
+/*Differenz Schriftfarbe dunkel*/
+.dpa_colorWon {
+    color: #29293a;
+}
+.dpa_colorLost {
+    color: #29293a;
+}
+
+/*Balken im Header der Liste*/
+.dpa_bars .dpa_barsList-content .dpa_barsList-head {
+    border-bottom: 0 solid #dbdbdb;
+}
+/* Partei und Diff Labels anpassen*/
+.dpa_bars .dpa_barsList-content .dpa_barsList-head div {
+    color: #29293a;
+    line-height: 20px;
+}
+/*Runde Ecken der Balken wieder eckig*/
+.dpa_bars .dpa_barsList-content .dpa_barContainer .dpa_bar {
+    border-radius: 0;
+}
+
+/* Linie unterhalb der Balken */
+.dpa_app .dpa_line {
+    display: block;
+    width: calc(100% - 8px);
+    left: 4px;
+    background-color: #29293a;
+    height: 1px;
+}
+
+.dpa_appSABars .dpa_bars-line,
+.dpa_appSAResultsCombi .dpa_component_bars .dpa_bars-line {
+    top: 150px;
+}
+
+/*Font size Partylables die besonders lang sind*/
+.dpa_bars
+    .dpa_bars-content
+    .dpa_bars-item.dpa_bar-par_de_91
+    .dpa_partyInfo-party,
+.dpa_bars
+    .dpa_bars-content
+    .dpa_bars-item.dpa_bar-par_de_113
+    .dpa_partyInfo-party,
+.dpa_bars
+    .dpa_bars-content
+    .dpa_bars-item.dpa_bar-par_de_18
+    .dpa_partyInfo-party,
+.dpa_bars
+    .dpa_bars-content
+    .dpa_bars-item.dpa_bar-par_de_3
+    .dpa_partyInfo-party,
+.dpa_bars
+    .dpa_bars-content
+    .dpa_bars-item.dpa_bar-par_de_12
+    .dpa_partyInfo-party,
+.dpa_bars
+    .dpa_bars-content
+    .dpa_bars-item.dpa_bar-par_tr_6
+    .dpa_partyInfo-party,
+.dpa_bars
+    .dpa_bars-content
+    .dpa_bars-item.dpa_bar-par_de_3416d002-127d-494b-b8e6-6cbac60abeae
+    .dpa_partyInfo-party,
+.dpa_bars
+    .dpa_bars-content
+    .dpa_bars-item.dpa_bar-par_es_f66070d6-b88c-4e71-9c59-fa097a932bd3
+    .dpa_partyInfo-party {
+    font-size: 14px;
+    line-height: unset;
+    padding: 7px 1px 3px;
+}
+
+/*Kein Padding*/
+.dpa_app .dpa_bars .dpa_bars-content .dpa_bars-item:first-child,
+.dpa_app.dpa_app-360 .dpa_bars .dpa_bars-content .dpa_bars-item:first-child,
+.dpa_app
+    .dpa_profitsLosses
+    .dpa_profitsLosses-content
+    .dpa_profitsLosses-item:first-child,
+.dpa_app.dpa_app-360
+    .dpa_profitsLosses
+    .dpa_profitsLosses-content
+    .dpa_profitsLosses-item:first-child,
+.dpa_app .dpa_seats .dpa_seats-items .dpa_seats-item:first-child,
+.dpa_app.dpa_app-568 .dpa_seats .dpa_seats-items .dpa_seats-item:first-child {
+    margin-left: 0;
+}
+
+.dpa_app .dpa_bars .dpa_bars-content .dpa_bars-item:nth-last-child(2),
+.dpa_app.dpa_app-360
+    .dpa_bars
+    .dpa_bars-content
+    .dpa_bars-item:nth-last-child(2),
+.dpa_app
+    .dpa_profitsLosses
+    .dpa_profitsLosses-content
+    .dpa_profitsLosses-item:nth-last-child(2),
+.dpa_app.dpa_app-360
+    .dpa_profitsLosses
+    .dpa_profitsLosses-content
+    .dpa_profitsLosses-item:nth-last-child(2),
+.dpa_app .dpa_seats .dpa_seats-items .dpa_seats-item:last-child,
+.dpa_app.dpa_app-568 .dpa_seats .dpa_seats-items .dpa_seats-item:last-child {
+    margin-right: 0;
+}
+
+.dpa_bars .dpa_bars-content .dpa_bars-item,
+.dpa_profitsLosses .dpa_profitsLosses-content .dpa_profitsLosses-item {
+    min-width: 44px;
+}
+
+.dpa_app .dpa_line,
+.dpa_app.dpa_app-360 .dpa_line {
+    width: 100%;
+    left: 0;
+}
+
+/***ProfitsLosses***/
+.dpa_profitsLosses .dpa_profitsLosses-scroll-container,
+.dpa_app.dpa_app-320 .dpa_profitsLosses .dpa_profitsLosses-scroll-container {
+    padding: 10px 0;
+}
+
+/*Abstand der Verluste zur Mittellinie*/
+.dpa_profitsLosses .dpa_barContainer.dpa_barContainer-negative .dpa_bar {
+    top: 0;
+    border-top: 1px solid #cccccc00;
+}
+
+/***Seats***/
+/*Value Info / Tendenzen linksbündig*/
+.dpa_seats .dpa_valueInfo-compare,
+.dpa_seats .dpa_valueInfo-extra {
+    padding: 0 0;
+    max-width: 550px;
+    margin: 0 0;
+}
+.dpa_seats .dpa_seats-doughnut-wrap .dpa_seats-doughnut-lbl {
+    font-weight: bold;
+}
+
+.dpa_seats .dpa_seats-items .dpa_seats-item.grey .dpa_seatsInfo {
+    background-color: transparent !important;
+}
+
+/*.dpa_app .dpa_seats .dpa_seats-item:not(.active) .bold
+{
+    font-weight: normal;
+}*/
+
+/***Coalitions***/
+.dpa_app.dpa_appSACoalition
+    .dpa_seats
+    .dpa_seats-coalitions-wrap
+    .dpa_seats-coalitions-info {
+    font-weight: bold;
+}
+
+.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-item:first-child
+    .dpa_seatsInfo {
+    border-left: 0 solid transparent;
+}
+
+.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-item:last-child
+    .dpa_seatsInfo {
+    border-right: 0 solid transparent;
+}
+
+.dpa_app.dpa_appSACoalition
+    .dpa_seats
+    .dpa_seats-item:not(.active)
+    .dpa_partyInfo-party-color {
+    background-color: #aaaaaa;
+}
+
+.dpa_seats .dpa_seats-content-wrap {
+    padding: 10px 0;
+}
+
+.dpa_app.dpa_appSACoalition
+    .dpa_seats
+    .dpa_seats-item
+    .dpa_seatsInfo
+    .dpa_seatsInfo-values {
+    background-color: transparent;
+}
+/*Anpassung Breite der Lables */
+.dpa_app.dpa_appSACoalition .dpa_seats .dpa_scroll-horizontal {
+    width: auto;
+    min-width: auto;
+    max-width: 550px;
+}
+/*Balken Zwischen Stimmebn und Partei-Label entfernen*/
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_partyInfo
+    .dpa_partyInfo-party-color {
+    display: none;
+}
+/*Padding der Party Labels anpassen*/
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-item
+    .dpa_partyInfo
+    .dpa_partyInfo-values {
+    padding: 5px 5px 0;
+}
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-item
+    .dpa_partyInfo
+    .dpa_partyInfo-party {
+    padding: 0 5px 5px;
+}
+
+/*Alle Labels mit grauer Borderund Borderradius*/
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-item
+    .dpa_seatsInfo {
+    border-radius: 10px;
+}
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-item.grey
+    .dpa_seatsInfo {
+    border: 2px solid #aaaaaa;
+    color: #71737f;
+}
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-item.grey
+    .dpa_partyInfo
+    .dpa_partyInfo-party {
+    color: #71737f;
+}
+
+/* MouseOverEffect auf transparent setzen Borderradius der Party Taggs */
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-items
+    .dpa_seatsInfo.dpa_over
+    .dpa_partyInfo-values {
+    background-color: transparent;
+}
+
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-items
+    .dpa_seats-item.active
+    .dpa_seatsInfo.dpa_over {
+    opacity: 0.8;
+}
+
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-items
+    .dpa_seats-item:not(.active)
+    .dpa_seatsInfo.dpa_over {
+    opacity: 1;
+    background-color: #f2f2f2 !important;
+}
+
+.dpa_partyInfo .dpa_partyInfo-values .dpa_partyInfo-value {
+    margin-bottom: 3px;
+}
+/*Aktiven Party Labels mit weißer Schrift */
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-item.active {
+    color: #fff;
+}
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-item.active
+    .dpa_partyInfo
+    .dpa_partyInfo-party {
+    color: #fff;
+}
+
+/* X ausblenden */
+.dpa_appSACoalition.dpa_app[data-hide-coalitions="true"]
+    .dpa_seats
+    .dpa_seats-item.active
+    .dpa_seatsInfo-close {
+    display: none !important;
+}
+
+/*Umbrechen der Parteibuttons*/
+.dpa_appSACoalition .dpa_seats .dpa_seats-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.dpa_appSACoalition .dpa_seats .dpa_seats-items .dpa_seats-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
+    margin: 0 3px;
+    min-width: 100px;
+    max-width: 100px;
+    /* flex: 0 1 10%;*/
+}
+
+/*Summary zentriert*/
+.dpa_seats .dpa_seats-coalitions-wrap {
+    text-align: center;
+}
+
+/*Kombi-Widget*/
+.dpa_app:not(.dpa_app-568)
+    .dpa_resultsCombi
+    .dpa_resultsCombi-content:nth-child(2) {
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.dpa_app:not(.dpa_app-568)
+    .dpa_resultsCombi
+    .dpa_resultsCombi-content:last-child {
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+/*Mehrheiten in den Stimmkreisen*/
+.dpa_areaTotal .dpa_areaTotal-chart {
+    padding: 10px 0;
+}
+
+.dpa_areaTotal .dpa_areaTotal-widget-valueInfo {
+    margin: 5px 0;
+}
+
+.dpa_areaTotal .dpa_areaTotal-majorities {
+    padding: 10px 0;
+}
+
+/***Stimmkreisergebnisse***/
+
+.dpa_votingAreas
+    .dpa_votingAreas-winner
+    .dpa_votingAreas-winner-image
+    .dpa_votingAreas-winner-image-img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+/*##################*/
+
+/* Eigene größer/kleiner Icons*/
+.dpa_map .dpa_zoom-btn {
+    border: none;
+}
+
+.dpa_zoom-menu #dpa_zoom-btnUp {
+    content: url("../img/zoomIn.svg");
+}
+.dpa_zoom-menu #dpa_zoom-btnDown {
+    content: url("../img/zoomOut.svg");
+    background: transparent;
+    margin-top: 20px;
+}
+
+/*######################*/
+
+/*Portrait links*/
+.dpa_votingAreas
+    .dpa_votingAreas-winner
+    .dpa_votingAreas-winner-content
+    .dpa_votingAreas-winner-content-left {
+    justify-content: left;
+}
+
+.dpa_votingAreas .dpa_votingAreasTurnout-content {
+    text-align: left;
+    padding: 10px 0;
+}
+
+.dpa_app .dpa_votingAreas-winner-content-right {
+    display: none;
+}
+
+.dpa_votingAreas
+    .dpa_votingAreas-winner
+    .dpa_votingAreas-winner-content
+    .dpa_votingAreas-winner-content-left,
+.dpa_app.dpa_app-568
+    .dpa_votingAreas-winner
+    .dpa_votingAreas-winner-content
+    .dpa_votingAreas-winner-content-left {
+    flex: auto;
+}
+
+.dpa_votingAreas .dpa_votingAreas-winner .dpa_votingAreas-winner-content {
+    height: 130px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-parties-header
+    .dpa_map-content-more-parties {
+    padding: 0 0 0 10px;
+}
+
+.dpa_map .dpa_map-content-wrap {
+    padding: 10px 0;
+}
+
+/* Stimmenauswahl */
+.dpa_votes-menu .dpa_votes-menu-content {
+    background-color: #f5f5f500;
+}
+.dpa_votes-menu
+    .dpa_votes-menu-content
+    .dpa_votes-menu-btn
+    .dpa_votes-menu-btn-line {
+    display: block;
+    height: 4px;
+}
+.dpa_app .backgroundColorHighlight {
+    background-color: #c0c1c6;
+}
+.dpa_votes-menu
+    .dpa_votes-menu-content
+    .dpa_votes-menu-btn.active
+    .dpa_votes-menu-btn-line {
+    background-color: #29293a;
+}
+.dpa_votes-menu
+    .dpa_votes-menu-content
+    .dpa_votes-menu-btn
+    .dpa_votes-menu-btn-label {
+    text-transform: none;
+    font-weight: bold;
+}
+.dpa_votes-menu .dpa_votes-menu-content .dpa_votes-menu-btn {
+    color: #71737f;
+}
+.dpa_votes-menu .dpa_votes-menu-content .dpa_votes-menu-btn.active {
+    color: #29293a;
+}
+
+/*dpa-Linie der Balken*/
+.dpa_component_votingAreas .dpa_component .dpa_line {
+    top: 100px;
+}
+
+/*Überschrift Stimmkreisgewinner*/
+.dpa_map .dpa_map-title-content .dpa_map-title-label {
+    text-align: left;
+    vertical-align: middle;
+    display: table-cell;
+    background-color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.dpa_app.dpa_app-480 .dpa_map-title-content .dpa_map-title-label {
+    font-size: 17px;
+}
+/*Zoom Navigation*/
+.dpa_map .dpa_zoom-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-parties-header
+    .dpa_map-content-more-parties
+    .dpa_map-content-more-parties-icon {
+    display: none;
+}
+
+.dpa_map .dpa_map-content-wrap .dpa_map-content .dpa_map-content-map {
+    position: relative;
+}
+
+/* ColorRange zu weit rechts*/
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-map
+    .dpa_map-content-map-color-range {
+    right: -3px;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-map
+    .dpa_map-content-map-color-range
+    .dpa_map-content-map-color-range-from,
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-map
+    .dpa_map-content-map-color-range
+    .dpa_map-content-map-color-range-to {
+    min-width: 35px;
+}
+
+/*Parteibuttons*/
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-party.active
+    .dpa_map-content-party-close-btn {
+    display: none !important;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-party:not(.active):not(:hover)
+    .dpa_map-content-party-circle {
+    background-color: #ffffff;
+    border: 1.5px solid #aaaaaa;
+    box-sizing: border-box;
+}
+
+/*Hover-Effekt inactive Buttons*/
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-party:not(.active):hover
+    .dpa_map-content-party-circle {
+    border: 1.5px solid #aaaaaa;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+}
+
+/*Hover-Effekt active Buttons*/
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-party.active:hover
+    .dpa_map-content-party-circle {
+    opacity: 0.8;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-party:not(.active)
+    .dpa_map-content-party-name {
+    color: #71737f;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-party.active,
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-party:hover {
+    background: transparent !important;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-parties-header
+    .dpa_map-content-parties-title-container {
+    line-height: 19px;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-parties-header
+    .dpa_map-content-parties-title {
+    margin-left: 0;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-parties-header
+    .dpa_map-content-more-parties {
+    flex-wrap: wrap;
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-parties-header {
+    margin-bottom: 15px;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-parties-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(105px, 0fr));
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-parties-content::before {
+    content: none;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-party {
+    position: relative;
+    width: 105px;
+    height: 31px;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-party {
+    padding: 0;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-party
+    .dpa_map-content-party-circle {
+    border: none;
+    border-radius: 10px;
+    margin-top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.dpa_map
+    .dpa_map-content-wrap
+    .dpa_map-content
+    .dpa_map-content-parties
+    .dpa_map-content-party
+    .dpa_map-content-party-name {
+    position: absolute;
+    z-index: 2;
+    color: #ffffff;
+    font-weight: bold;
+    width: 85px;
+    line-height: 31px;
+    text-align: center;
+    margin: 0 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*Direkwahlfrage*/
+.dpa_ranking .dpa_ranking-content {
+    padding: 0;
+}
+
+.dpa_app .dpa_ranking .dpa_content-title,
+.dpa_app.dpa_app-360 .dpa_ranking .dpa_content-title {
+    padding: 0;
+}
+
+/***Politikerzufriedenheit***/
+
+.dpa_satisfaction .dpa_ranking-content {
+    padding: 0;
+}
+
+.dpa_satisfaction .dpa_content-title {
+    text-align: left;
+    padding: 0;
+}
+
+/***Wählerwanderung***/
+
+.dpa_sankey #dpa_sankey-viz {
+    margin: 20px 0;
+}
+
+/*Button Show All*/
+.dpa_sankey .dpa_sankey-btn-showAll {
+    background: #ffffff00 !important;
+    font-weight: normal;
+    padding: 5px 0;
+}
+
+.dpa_sankey .dpa_sankey-btn-showAll:hover {
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    padding: 5px 0px;
+    font-weight: bold;
+}
+
+/*Jahreszahlen in schwarz*/
+.dpa_sankey .dpa_sankey-svg .yearFrom,
+.dpa_sankey .dpa_sankey-svg .yearTo {
+    fill: #000;
+}
+/*Partei namen in schwarz*/
+.dpa_sankey text.party {
+    fill: #000 !important;
+}
+
+/***Umfrageverlauf***/
+.dpa_chart .dpa_chartContent {
+    padding: 15px 0;
+}
+
+/***Allgemeiner Footer***/
+.dpa_app .dpa_widget-footer {
+    padding: 0;
+}
+
+/* Footer linksbündig*/
+.dpa_app .dpa_pageTitle1,
+.dpa_app .dpa_valueInfo {
+    text-align: left;
+}
+
+/* Farbe Value Info */
+.dpa_widget-valueInfo .dpa_valueInfo {
+    color: #29293a;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+/* Abstände Footer*/
+.dpa_widget-valueInfo {
+    overflow: auto;
+    margin: 5px 0 12px;
+}
+
+/* Footer Linie*/
+.dpa_app .dpa_widget-footer .dpa_widget-footer-content {
+    padding: 7px 0 11px;
+    border-top: 1px solid #71737f;
+}
+/* Quelle und Stand linksbündig*/
+.dpa_app .dpa_widget-footer .floatLeft {
+    margin-right: 3px;
+}
+.dpa_app .dpa_widget-footer .floatRight {
+    float: left;
+}
+.dpa_pageFooter-source::after {
+    content: ",";
+}
+.dpa_app-mobile_true .dpa_widget-footer .dpa_pageFooter-source,
+.dpa_app-mobile_true .dpa_widget-footer .dpa_pageFooter-status {
+    float: none;
+    line-height: 1.5;
+}
+
+/*Close Button Overlay*/
+/***Close-Button***/
+.dpa_app .dpa_popup-close-icon {
+    background: #ffffff url("../img/close.svg") no-repeat center center;
+    margin-top: 0;
+}
+.dpa_app .dpa_popup-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.dpa_app .dpa_popup-close-icon > svg {
+    display: none;
+}
+
+/*Info-Icon*/
+.dpa_app .dpa_btnInfo {
+    width: 18px;
+    height: 18px;
+    background: #ffffff url("../img/info.svg") no-repeat center center;
+    color: transparent;
+    right: 1px;
+}
+
+.dpa_fontSize11 {
+    font-size: 12px;
+}

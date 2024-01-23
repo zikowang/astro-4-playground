@@ -1,0 +1,28 @@
+{
+    "settings": {
+        "ga": {
+            "init-pageview": true,
+            "trackingId": "UA-50958157-19"
+        }
+    },
+    "labels": {
+        "unit_percent": " %",
+        "showMoreParties": "Weitere Parteien",
+        "showMoreCandidates": "Weitere Kandidaten",
+        "valueInfo-percentPoints": "in Prozentpunkten",
+        "valueInfoCompare-survey": "Vergleich zur Umfrage vom ###date###",
+        "valueInfoCompare-election": "Vergleich zur Wahl ###year-previous###",
+        "barsCompare-survey": "<b>Oberer Balken: ###date1###</b><br/>Unterer Balken: ###date2###",
+        "barsCompare-survey_short": "<b>Oben: ###date1###</b><br/>Unten: ###date2###",
+        "barsCompare-election": "<b>Oberer Balken: ###date1###</b><br>Unterer Balken: Wahl ###year-previous###",
+        "barsCompare-election_short": "<b>Oben: ###date1###</b><br>Unten: Wahl ###year-previous###",
+        "resultTypeId6": "Vorläufiges amtliches Endergebnis",
+        "resultTypeId7": "Amtliches Endergebnis"
+    },
+    "social": {
+        "mail": false,
+        "facebook": false,
+        "twitter": false,
+        "whatsapp": false
+    }
+}
