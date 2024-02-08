@@ -13,7 +13,7 @@ test("Election list link", async ({ page }) => {
     await page.goto(BASE_URL);
 
     // Click the Pokemon link.
-    await page.getByRole("link", { name: "DE Bundetagswahl 2021" }).click();
+    await page.getByRole("link", { name: "DE Bundestagswahl 2021" }).click();
 
     // Expects page to have a heading with the name of List
     await expect(page.getByRole("heading", { name: "Bars" })).toBeVisible();

@@ -9,7 +9,6 @@ This project is a prototype for the ElectionsLive project. It is built using Ast
 - [Tech Stack](#tech-stack)
 - [Pre-requisites](#pre-requisites)
 - [Developing](#developing)
-- [Testing](#testing)
 - [Structure](#structure)
   - [Bootstrap](#bootstrap)
     - [`paramService.ts`](#paramservicets)
@@ -20,6 +19,7 @@ This project is a prototype for the ElectionsLive project. It is built using Ast
   - [Widgets](#widgets)
   - [Components](#components)
   - [Styling](#styling)
+- [Testing](#testing)
 
 # Tech Stack
 
@@ -66,24 +66,16 @@ To start the development server, run the following command:
 npm start
 ```
 
-# Testing
-
-We are using [Playwright](https://playwright.dev/) for testing. To run the tests, run the following command:
+To build the project, run the following command:
 
 ```bash
-npm run test
+npm run build
 ```
 
-Maybe you have to install the playwright dependencies first:
+To build and preview it locally, run the following command:
 
 ```bash
-npx playwright install --with-deps chromium
-
-npx playwright install --with-deps webkit
-
-npx playwright install --with-deps firefox
-
-npx playwright install --with-deps msedge
+npm run preview
 ```
 
 # Structure
@@ -143,3 +135,23 @@ Each low-level component is responsible for its own state and data management. T
 The styling is done with SCSS. The class names are following the [BEM](http://getbem.com/) methodology.
 
 The custom styles are fetched from the `styleService.ts` and merged into the default styles. The default custom styles (copied from SZ) for dev are located in the `src/styles` folder.
+
+# Testing
+
+We are using [Playwright](https://playwright.dev/) for testing. To run the tests, run the following command:
+
+```bash
+npm run test
+```
+
+Maybe you have to install the playwright dependencies first:
+
+```bash
+npx playwright install --with-deps chromium
+
+npx playwright install --with-deps webkit
+
+npx playwright install --with-deps firefox
+
+npx playwright install --with-deps msedge
+```
