@@ -6,7 +6,8 @@ import { defineConfig, devices } from "@playwright/test";
  */
 import "dotenv/config";
 
-const BASE_URL = `${process.env.VITE_HOST}:${process.env.VITE_PORT}`;
+// const BASE_URL = `${process.env.VITE_HOST}:${process.env.VITE_PORT}`;
+const TEST_URL = `${process.env.VITE_TEST_URL}:${process.env.VITE_TEST_PORT}`;
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -14,7 +15,8 @@ const BASE_URL = `${process.env.VITE_HOST}:${process.env.VITE_PORT}`;
 export default defineConfig({
     webServer: {
         command: "npm start",
-        url: BASE_URL,
+        // url: TEST_URL,
+        url: TEST_URL,
         timeout: 5 * 1000,
         reuseExistingServer: !process.env.CI,
     },
@@ -75,11 +77,4 @@ export default defineConfig({
         //     use: { ...devices["Desktop Chrome"], channel: "chrome" },
         // },
     ],
-
-    /* Run your local dev server before starting the tests */
-    // webServer: {
-    //   command: 'npm run start',
-    //   url: 'http://127.0.0.1:3000',
-    //   reuseExistingServer: !process.env.CI,
-    // },
 });
