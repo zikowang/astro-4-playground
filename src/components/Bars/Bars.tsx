@@ -96,17 +96,17 @@ const Bars = () => {
                             <tr key={result.id}>
                                 <td>
                                     {result.party ? (
-                                        <div className="dpa_ranking">
+                                        <div className="dpa-ranking">
                                             <img
-                                                className="dpa_image"
+                                                className="dpa-image"
                                                 src={`${PUBLIC_ELECTIONS_LIVE_S3}/${params.competition}/img/${params.season}/${result.party}/${result.id}.png`}
                                                 alt={`${result.id}`}
                                             />
                                         </div>
                                     ) : (
-                                        <div className="dpa_ranking">
+                                        <div className="dpa-ranking">
                                             <img
-                                                className="dpa_image"
+                                                className="dpa-image"
                                                 src={`${PUBLIC_ELECTIONS_LIVE_S3}/${params.competition}/img/${params.season}/${result.id}/${result.id}.png`}
                                                 alt={`${result.id}`}
                                             />

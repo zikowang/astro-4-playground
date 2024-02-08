@@ -4,21 +4,22 @@ This project is a prototype for the ElectionsLive project. It is built using Ast
 
 # Table of contents
 
--   [ElectionsLive Astro Project](#electionslive-astro-project)
--   [Table of contents](#table-of-contents)
--   [Tech Stack](#tech-stack)
--   [Pre-requisites](#pre-requisites)
--   [Developing](#developing)
--   [Testing](#testing)
--   [Structure](#structure)
-    -   [Bootstrap](#bootstrap)
-        -   [`paramService.ts`](#paramservicets)
-        -   [`configService.ts`](#configservicets)
-        -   [`styleService.ts`](#styleservicets)
-        -   [`labelsService.ts`](#labelsservicets)
-        -   [`dataService.ts`](#dataservicets)
-    -   [Widgets](#widgets)
-    -   [Components](#components)
+- [ElectionsLive Astro Project](#electionslive-astro-project)
+- [Table of contents](#table-of-contents)
+- [Tech Stack](#tech-stack)
+- [Pre-requisites](#pre-requisites)
+- [Developing](#developing)
+- [Testing](#testing)
+- [Structure](#structure)
+  - [Bootstrap](#bootstrap)
+    - [`paramService.ts`](#paramservicets)
+    - [`configService.ts`](#configservicets)
+    - [`styleService.ts`](#styleservicets)
+    - [`labelsService.ts`](#labelsservicets)
+    - [`dataService.ts`](#dataservicets)
+  - [Widgets](#widgets)
+  - [Components](#components)
+  - [Styling](#styling)
 
 # Tech Stack
 
@@ -136,3 +137,9 @@ Each widget page-file calls a widget-component that renders the widget and compo
 The low level components are located in the `src/components` folder. They are used by the widget-components to render the widgets.
 
 Each low-level component is responsible for its own state and data management. This should be done within a custom hook, so the logic can be [tested](#testing) easily.
+
+## Styling
+
+The styling is done with SCSS. The class names are following the [BEM](http://getbem.com/) methodology.
+
+The custom styles are fetched from the `styleService.ts` and merged into the default styles. The default custom styles (copied from SZ) for dev are located in the `src/styles` folder.

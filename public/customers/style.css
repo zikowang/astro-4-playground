@@ -254,7 +254,7 @@ body {
     top: 150px;
 }
 
-/*Font size Partylables die besonders lang sind*/
+/*Font size Partylabels die besonders lang sind*/
 .dpa_bars
     .dpa_bars-content
     .dpa_bars-item.dpa_bar-par_de_91
@@ -410,7 +410,7 @@ body {
     .dpa_seatsInfo-values {
     background-color: transparent;
 }
-/*Anpassung Breite der Lables */
+/*Anpassung Breite der Labels */
 .dpa_app.dpa_appSACoalition .dpa_seats .dpa_scroll-horizontal {
     width: auto;
     min-width: auto;
@@ -910,18 +910,18 @@ body {
 }
 
 /*Direkwahlfrage*/
-.dpa_ranking .dpa_ranking-content {
+.dpa-ranking .dpa-ranking-content {
     padding: 0;
 }
 
-.dpa_app .dpa_ranking .dpa_content-title,
-.dpa_app.dpa_app-360 .dpa_ranking .dpa_content-title {
+.dpa_app .dpa-ranking .dpa_content-title,
+.dpa_app.dpa_app-360 .dpa-ranking .dpa_content-title {
     padding: 0;
 }
 
 /***Politikerzufriedenheit***/
 
-.dpa_satisfaction .dpa_ranking-content {
+.dpa_satisfaction .dpa-ranking-content {
     padding: 0;
 }
 

@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 import { getConfig } from "services/configService";
 import { getData } from "services/dataService";
-import { getLabels } from "services/lablesService";
+import { getLabels } from "services/labelsService";
 import { getParams } from "services/paramsService";
 import { getCustomStyle } from "services/styleService";
 import { $globalStore } from "store/globalStore";
